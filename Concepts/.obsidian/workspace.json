@@ -1,0 +1,207 @@
+{
+  "main": {
+    "id": "3f8884ed63e5d5d7",
+    "type": "split",
+    "children": [
+      {
+        "id": "d3ac0da10b721395",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e16bde3b4df743ac",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "b5f84fb01f695228",
+    "type": "split",
+    "children": [
+      {
+        "id": "4984a5ad921856ba",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "fb210281e0cf077e",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "0de2316da1e6755b",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "5daa7af7590b7b08",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "e9807dcc501058fb",
+    "type": "split",
+    "children": [
+      {
+        "id": "9e8c3024c7389b7b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "10b46db89b426fb5",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "59f41dca9cb7763e",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
+          },
+          {
+            "id": "f88970eb735ba55a",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "67a01d85daafd18f",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {},
+              "icon": "lucide-list",
+              "title": "Outline"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "e16bde3b4df743ac",
+  "lastOpenFiles": [
+    "Concurrency/Python Multiprocessing.md",
+    "Resources (Memory).md",
+    "Concepts.md",
+    "8. Database Management and Warehousing/Assets",
+    "8. Database Management and Warehousing/8. Database Management and Warehousing.md",
+    "8. Database Management and Warehousing",
+    "7. Artificial Intelligence/7. Artificial Intelligence.md",
+    "7. Artificial Intelligence/Assets",
+    "7. Artificial Intelligence",
+    "6. Calculus and Optimization/Assets",
+    "6. Calculus and Optimization/6. Calculus and Optimization.md",
+    "6. Calculus and Optimization",
+    "5. Linear Algebra/Assets",
+    "5. Linear Algebra/5. Linear Algebra.md",
+    "5. Linear Algebra",
+    "4. General Aptitude/Assets",
+    "4. General Aptitude/4. General Aptitude.md",
+    "4. General Aptitude",
+    "3. Machine Learning/3. Machine Learning.md",
+    "2. Probability and Statistics/Assets/Pasted image 20241023081930.png",
+    "2. Probability and Statistics/Assets/Pasted image 20241023110100.png",
+    "2. Probability and Statistics/Assets/Pasted image 20241023105457.png",
+    "2. Probability and Statistics/Assets/Pasted image 20241023105021.png",
+    "2. Probability and Statistics/Assets/Pasted image 20241023082438.png",
+    "2. Probability and Statistics/Assets/Pasted image 20241023081423.png",
+    "2. Probability and Statistics/Assets/Pasted image 20241023081045.png",
+    "2. Probability and Statistics/Probability and Statistics.md",
+    "2. Probability and Statistics/Notes - Probability and Statistics.md",
+    "2. Probability and Statistics/2. Probability and Statistics.md",
+    "1. Programming, DSA/1. Programming, DSA.md",
+    "Concepts/2. Probability and Statistics/Probability and Statistics.md",
+    "Concepts/2. Probability and Statistics/Assets/Pasted image 20241023081045.png",
+    "Concepts/2. Probability and Statistics/Notes - Probability and Statistics.md",
+    "Concepts/2. Probability and Statistics/Assets/Pasted image 20241023110100.png",
+    "Concepts/2. Probability and Statistics/Assets/Pasted image 20241023105457.png",
+    "Concepts/2. Probability and Statistics/2. Probability and Statistics.md",
+    "Concepts/Resources (Memory).md",
+    "Concepts/8. Database Management and Warehousing/8. Database Management and Warehousing.md",
+    "Concepts/7. Artificial Intelligence/7. Artificial Intelligence.md",
+    "Concepts/6. Calculus and Optimization/6. Calculus and Optimization.md",
+    "Concepts/5. Linear Algebra/5. Linear Algebra.md",
+    "Concepts/4. General Aptitude/4. General Aptitude.md",
+    "Concepts/3. Machine Learning/3. Machine Learning.md",
+    "Concepts/1. Programming, DSA/1. Programming, DSA.md",
+    "Untitled.canvas",
+    "Concepts/Concepts.md",
+    "Welcome.md"
+  ]
+}
