@@ -209,4 +209,284 @@ $$P(\text{Not All Heads}) = 1 - \frac{1}{8} = \frac{7}{8}$$
 
 ## **Counting Principle**
 https://www.youtube.com/watch?v=DK8BV30N_c4&t=389s
-52:03
+
+### **Permutation and Combination: All \( n \) Items Taken at Once**
+
+#### 1. **Permutation (When Order Matters)**
+
+**Definition**: A **permutation** is an arrangement of items where **order matters**. If you have $( n )$ different items, the number of ways to arrange (or permute) all of them **at once** is called the **number of permutations**.
+
+The **formula** for the number of permutations when arranging $( n )$ items taken all at once is:
+
+$$P(n) = n!$$
+
+This is because:
+- For the **first position**, you have $( n )$ choices.
+- Once an item is placed in the first position, you have $( n-1 )$ choices left for the second position.
+- For the **third position**, you have $( n-2 )$ choices, and so on, until you reach the last position where you only have **1 choice** left.
+
+Thus, the total number of ways to arrange $( n )$ items taken all at once is:
+$$n \times (n-1) \times (n-2) \times \dots \times 1 = n!$$
+
+![[Pasted image 20241024110716.png]]
+#### **Box Method for Permutation**
+We have 5 items to arrange into 5 boxes. Each box represents a position in the arrangement. The number of choices decreases as we place each item in a box.
+
+```
+	 +-----+       +-----+     +-----+     +-----+       +-----+
+	 | Box |  ->   | Box |  -> | Box |  -> | Box |  ->   | Box |
+	 |  1  |       |  2  |     |  3  |     |  4  |       |  5  |
+	 +-----+       +-----+     +-----+     +-----+       +-----+
+	 Choices:     Choices:     Choices:     Choices:     Choices:
+	    5            4            3            2            1
+	(5 items)   (4 items left) (3 items left) (2 items left) (1 item left)
+```
+
+**Example**: Arranging the items $( A, B, C, D, E )$ taken all at once.
+
+Let’s calculate the number of different ways to arrange these 5 items using the **box method**:
+
+- **Step 1**: Place an item in the first box. You have **5 choices** for this (any one of $( A, B, C, D, E ))$.
+  
+- **Step 2**: After filling the first box, there are **4 items** left for the second box.
+  
+- **Step 3**: For the third box, you have **3 remaining items** to choose from.
+  
+- **Step 4**: For the fourth box, only **2 items** remain.
+  
+- **Step 5**: For the last box, you are left with **1 item**.
+
+So, using the box method, the total number of permutations (arrangements) is:
+
+$$ 5 \times 4 \times 3 \times 2 \times 1 = 5! = 120 $$
+
+Thus, the number of ways to arrange $( A, B, C, D, E )$ all at once is **120**.
+
+#### 2. **Combination (When Order Does Not Matter)**
+
+**Definition**: A **combination** is a selection of items where **order does not matter**. If you have $( n )$ different items and you want to **select all of them** at once (without arranging them), then the number of ways to do this is **always 1**.
+
+This is because:
+- If order doesn’t matter, there is **only one way** to select all items. No matter how you rearrange them, the selection remains the same.
+
+So, when **selecting all $( n )$ items** at once, the number of combinations is:
+
+$$C(n) = 1$$
+
+![[Pasted image 20241024110456.png]]
+
+#### **Combination (Order Doesn’t Matter) vs Permutation (Order Matters)**
+
+Imagine you are selecting **2 students** (Shivam and Ankit) from a group of 10 students in a college. Since **order doesn’t matter**, selecting **Shivam and Ankit** is the same as selecting **Ankit and Shivam**. This means there is **only 1 combination** for this selection, as order does not affect the group.
+
+However, if you were **arranging** the students in an order (like for seating), then you would consider both **Shivam-Ankit** and **Ankit-Shivam** as different, leading to more possibilities (which is a **permutation** problem).
+
+---
+
+![[Pasted image 20241024121621.png]]
+
+![[Pasted image 20241024122412.png]]
+
+### **Permutations: $N$ Different Items Taken $( r )$ at a Time**
+**Concept**: When you are arranging or selecting items where **order matters**, and you are not taking all the items, but a subset $( r )$ of the total $( n )$, the number of ways to arrange the items is called the **number of permutations**.
+
+The formula for the **number of permutations** when choosing $( r )$ items from $( n )$ different items is:
+
+$$^{n}P_{r} = P(n, r) = \frac{n!}{(n-r)!}$$
+
+#### **1. Box Method for Permutation (Choosing $( r )$ at a Time)**
+
+- Let’s say we have $5$ items: $( A, B, C, D, E )$, and we want to take **3 items** at a time to form permutations.
+- The **box method** helps us visualize this by placing $( r = 3 )$ boxes for 3 positions, and each position can be filled by one of the $( n )$ items:
+
+```
+ +-----+      +-----+      +-----+
+ | Box |  ->  | Box |  ->  | Box |
+ |  1  |      |  2  |      |  3  |
+ +-----+      +-----+      +-----+
+ Choices:     Choices:     Choices:
+    5            4            3
+(5 items)   (4 items left)  (3 items left)
+```
+
+- In the first box, we have **5 choices** (any one of the items $( A, B, C, D, E )$).
+- After placing one item in the first box, we have **4 items left** for the second box.
+- After filling two boxes, we have **3 items left** for the third box.
+
+Thus, the number of ways to arrange **3 items** from the 5 is:
+
+$$^{n}P_{r} = ^{5}P_{3} = P(5, 3) = 5 \times 4 \times 3 = 60$$
+
+In general, the formula is:
+
+$$^{n}P_{r} = P(n, r) = \frac{n!}{(n - r)!}$$
+
+#### **2. Example: Permuting 4 Letters from “DELHI”**
+
+If we take the word "DELHI" and want to arrange 4 letters from it, we calculate the number of permutations using the same formula.
+
+For $( n = 5 )$ (letters in "DELHI") and $( r = 4 )$ (we want to arrange 4 letters):
+
+$$^{5}P_{4} = P(5, 4) = \frac{5!}{(5 - 4)!} = \frac{5 \times 4 \times 3 \times 2 \times 1}{1!} = 120$$
+
+So, there are **120 ways** to arrange 4 letters from "DELHI".
+
+#### **3. Combinations: N Different Items Taken $( r )$ at a Time**
+
+**Concept**: In **combinations**, where **order does not matter**, the formula is different. If we are selecting $( r )$ items from $( n )$ items without caring about the order, the formula is:
+
+$$^{n}C_{r} = C(n, r) = \frac{n!}{r!(n - r)!}$$
+
+#### Example: Combinations from 5 Items (Order Doesn't Matter)
+
+Let’s say we want to select **2 items** from the set $( A, B, C, D, E )$, and we don’t care about the order of selection. To calculate the number of combinations, we use the formula:
+
+$$^{n}C_{r} = C(5, 2) = \frac{5!}{2!(5 - 2)!} = \frac{5 \times 4}{2!} = \frac{20}{2} = 10$$
+
+So, there are **10 combinations** of selecting 2 items from 5.
+
+#### **Combinations Visualization Using the Grid (From Image)**
+
+- The grid in the image visualizes all possible **combinations** of 2 letters from the set $({ A, B, C, D, E})$.
+  
+  ```
+      A   B   C   D   E
+  A  AA  AB  AC  AD  AE
+  B  BA  BB  BC  BD  BE
+  C  CA  CB  CC  CD  CE
+  D  DA  DB  DC  DD  DE
+  E  EA  EB  EC  ED  EE
+  ```
+
+- Diagonal and repeated elements are removed because **order does not matter** in combinations. For example, $( AB )$ and $( BA )$ are considered the same combination, so we only keep one.
+- After removing duplicates, we are left with **10 unique combinations**.
+
+---
+
+![[Pasted image 20241024130011.png]]
+
+Based on the provided image and the transcription, here’s a detailed explanation focusing on **permutations and combinations** for scenarios with repeated items (i.e., \( p \)-alike, \( q \)-alike, and \( r \)-alike items).
+
+---
+
+### **$( N )$ Different Items with Repeated Items Taken all at a time or all at once
+When dealing with $( N )$ items where some **items are repeated**, calculating **permutations** (where order matters) and **combinations** (where order doesn't matter) requires adjusting for the repeated nature of some items.
+#### 1. Permutations with Repeated Items:
+$$\text{Number of Permutations} = \frac{n!}{p_1! \cdot p_2! \cdot \dots \cdot p_k!}$$
+
+Where:
+- $( n! )$ is the factorial of the total number of items.
+- $( p_1!, p_2!, \dots, p_k! )$ are the factorials of the frequencies of the repeated items.
+
+This formula ensures that we don't overcount the arrangements of indistinguishable items, treating them as the same.
+#### **Example: Word "CALCULUS"**
+
+Let's break down how we apply this to the word **CALCULUS**:
+- Total letters: 8 $(C, A, L, C, U, L, U, S)$
+- C occurs 2 times (P-alike),
+- L occurs 2 times (Q-alike),
+- U occurs 2 times (R-alike).
+
+Using the formula:
+
+$$\text{Permutations} = \frac{8!}{2! \cdot 2! \cdot 2!}$$
+
+Calculating:
+
+$$8! = 40320, \quad 2! = 2$$
+
+$$\text{Permutations} = \frac{40320}{2 \cdot 2 \cdot 2} = \frac{40320}{8} = 5040$$
+
+Thus, the total number of distinct permutations for the word **CALCULUS** is **5040**.
+
+#### 2. Combinations with Repeated Items:
+
+For **combinations** with repeated items, when you are **taking all items at once**, the result is always **1 combination**. This happens because:
+- The order of selection does not matter in combinations.
+- Since all items (including repeated ones) are being selected at once, there is no additional variability in how they can be grouped or selected differently.
+
+#### **General Formula:**
+
+$$\text{Number of Combinations} = 1$$
+
+This holds true because when all items are taken at a time, no matter how many repeated items there are, there is only **one** way to select them. This is due to the fact that combinations disregard order and treat all identical items as indistinguishable from each other.
+
+#### Example: Combinations for "CALCULUS"
+
+If you're selecting **all the letters** in the word **CALCULUS** (C, A, L, C, U, L, U, S), the number of combinations is simply **1** because no matter the repetitions of letters, the selection is the same.
+
+![[Pasted image 20241024134043.png]]
+
+
+![[Pasted image 20241025091546.png]]
+
+![[Pasted image 20241025092853.png]]
+
+![[Pasted image 20241025093723.png]]
+
+![[Pasted image 20241025094022.png]]
+
+### Counting Principles and Probability Concepts from the Images
+
+#### **Scenario 1: Number of Ways with Multiple Options**
+  
+1. **3 Letters into 4 Post Boxes**:
+   - Total number of ways to distribute 3 letters into 4 post boxes is calculated as:
+     $$4 \times 4 \times 4 = 4^3 = 64$$
+   - This demonstrates how for each letter, you have 4 choices (one for each post box), leading to a multiplicative total for 3 letters.
+
+2. **Three Dice Thrown**:
+   - Total number of ways to throw 3 dice, where each die has 6 faces:
+     $$6 \times 6 \times 6 = 6^3 = 216$$
+   - The principle applied here is similar, where each independent die roll has 6 possible outcomes.
+
+3. **Five Coin Tosses**:
+   - The number of ways to toss 5 coins, each with 2 outcomes (heads or tails), is:
+     $$2 \times 2 \times 2 \times 2 \times 2 = 2^5 = 32$$
+   - Each coin flip is an independent event, so the total number of outcomes is the product of 2 for each coin.
+
+#### **Scenario 2: Sampling - Drawing Balls from a Bag**
+
+##### With and Without Replacement
+
+1. **Without Replacement:**
+   - Consider a bag with 3 yellow balls and 5 non-yellow balls (total 8 balls). The probability of drawing **2 yellow balls without replacement** is:
+     $$P(\text{1st yellow}) = \frac{3}{8}, \quad P(\text{2nd yellow after 1st}) = \frac{2}{7}$$
+   - Multiply these probabilities for the final result:
+     $$P(\text{2 yellows}) = \frac{3}{8} \times \frac{2}{7} = \frac{6}{56} = \frac{3}{28}$$
+   - In **without replacement** cases, the sample space decreases after each draw, making each event dependent on the previous one.
+
+2. **With Replacement:**
+   - In this case, the total number of balls remains constant after each draw. For example, if there are 6 white balls out of 10, the probability of drawing **6 white balls with replacement** is:
+     $$P(\text{white ball}) = \frac{6}{10}, \quad P(\text{2nd white ball}) = \frac{6}{10}$$
+   - The total probability is calculated as:
+     $$P(\text{6 white balls}) = \left( \frac{6}{10} \right)^6$$
+   - **With replacement** implies independent events, where each draw does not affect the probability of the subsequent draws.
+
+#### **Multiple and Addition Principle**
+
+1. **Multiplication Principle** (for dependent tasks):
+   - If there are multiple stages to a task, and each stage has a certain number of possible outcomes, the total number of outcomes is the **product** of the possibilities at each stage. For example:
+     $$\text{Ways to roll 3 dice} = 6 \times 6 \times 6 = 216$$
+   - Each die roll is an independent event, and the total outcomes are calculated by multiplying the number of outcomes for each stage.
+
+2. **Addition Principle** (for independent tasks):
+   - If there are multiple mutually exclusive tasks (tasks that cannot happen simultaneously), the total number of ways to complete the tasks is the **sum** of the individual possibilities. For example, if you can complete task A in 5 ways and task B in 4 ways, the total number of ways to choose between A and B is:
+     $$5 + 4 = 9$$
+   - This applies to scenarios where different outcomes do not depend on each other and cannot happen at the same time.
+
+#### **Scenario 3: Playing Cards**
+
+- A deck of 52 cards can be divided as:
+  - **26 red cards** (13 diamonds, 13 hearts)
+  - **26 black cards** (13 clubs, 13 spades)
+  - **Face cards**: King, Queen, Jack (4 suits × 3 cards = 12 face cards)
+  - **Non-face cards**: Ace through 10 (4 suits × 10 cards = 40 non-face cards)
+  
+  - **Example of selection**:
+    If you were to select a face card from the deck, the probability is:
+    $$P(\text{face card}) = \frac{12}{52} = \frac{3}{13}$$
+
+
+https://www.youtube.com/watch?v=DK8BV30N_c4&t=389s
+1:35

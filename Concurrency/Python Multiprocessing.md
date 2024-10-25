@@ -1100,3 +1100,144 @@ Evaluate the student's answers by comparing them with standard answers stored in
      - `llm_evaluation`: String
 
 ---
+
+Sure! Here’s an updated version of **Workflow 2: Evaluate Question-Answer Pairs** with sample questions and answers more aligned with **CA Foundation** subjects like Accounting, Business Laws, Economics, and Business Mathematics:
+
+---
+
+## Workflow 2: Evaluate Question-Answer Pairs
+
+### Purpose
+
+Evaluate CA Foundation student answers by comparing them with standard answers using multiple Large Language Models (LLMs). Marks are assigned based on these evaluations, and feedback is provided to the student.
+
+### Endpoint
+
+`POST /evaluate-answers`
+
+### How It Works
+
+1. **Data Retrieval**: Retrieve question-answer pairs and corresponding standard answers from the database.
+2. **Evaluation Process**:
+   - **LLM1**: Performs the initial evaluation by comparing the student's answer with the standard answer.
+   - **LLM2**: Verifies the accuracy of LLM1's evaluation.
+     - If **correct**, the response is sent back to the client.
+     - If **incorrect**, the data is forwarded to **LLM3**.
+   - **LLM3**: Re-evaluates the answer and provides the final assessment if discrepancies were found.
+3. **Marks Assignment**: Assign marks to each question based on the final evaluation.
+4. **Result Compilation**: Compile the final marks and feedback for each question-answer pair.
+5. **Data Storage**: Save the following data in the database:
+   - Evaluations from LLM1, LLM2, and LLM3 (if applicable).
+   - Verification results and any discrepancies.
+   - The final evaluation response that is sent to the client.
+
+### Request Body
+
+- **User Information**:
+  - `user_id`: String
+- **Course and Exam Information**:
+  - `course_code`: String
+  - `exam_code`: String
+  - `question_paper_code`: String
+- **Question-Answer Pairs**:
+  - `qa_pairs`: Array of objects
+    - `question_number`: String
+    - `student_answer`: String
+    - `standard_answer`: String
+    - `total_marks`: Integer
+
+**Example**
+
+```json
+{
+  "user_id": "USER123",
+  "course_code": "CA-FND-2024",
+  "exam_code": "CA-FO-PAPER1",
+  "question_paper_code": "QP001",
+  "qa_pairs": [
+    {
+      "question_number": "1.a",
+      "student_answer": "The going concern concept assumes that a business will continue to operate indefinitely.",
+      "standard_answer": "The going concern concept is an accounting principle that assumes a company will continue its operations in the foreseeable future.",
+      "total_marks": 10
+    },
+    {
+      "question_number": "1.b",
+      "student_answer": "The accounting equation is: Assets = Liabilities + Capital.",
+      "standard_answer": "The accounting equation states that Assets are equal to Liabilities plus Owner's Equity: Assets = Liabilities + Capital.",
+      "total_marks": 10
+    },
+    {
+      "question_number": "2.a",
+      "student_answer": "A promissory note is an unconditional promise in writing to pay a certain sum of money to a specific person.",
+      "standard_answer": "A promissory note is a financial instrument that contains a written promise by one party to pay a definite sum of money to another party.",
+      "total_marks": 8
+    },
+    {
+      "question_number": "3.a",
+      "student_answer": "Microeconomics is the study of individual economic units like households and firms.",
+      "standard_answer": "Microeconomics focuses on the behavior and decision-making processes of individual units such as consumers, firms, and markets.",
+      "total_marks": 7
+    }
+  ]
+}
+```
+
+### Response
+
+- **Status**: Success or failure of the evaluation.
+- **Evaluation Results**: An array of evaluations for each question-answer pair.
+- **Final Score**: The total marks awarded to the student.
+- **Message**: Confirmation or error message.
+
+**Example**
+
+```json
+{
+  "status": "success",
+  "user_id": "USER123",
+  "course_code": "CA-FND-2024",
+  "exam_code": "CA-FO-PAPER1",
+  "question_paper_code": "QP001",
+  "total_exam_marks": 100,
+  "evaluation": [
+    {
+      "question_number": "1.a",
+      "llm1_evaluation": "The student's answer is accurate and aligns closely with the standard answer.",
+      "llm2_verification": "Correct evaluation.",
+      "marks_awarded": 9,
+      "total_marks": 10
+    },
+    {
+      "question_number": "1.b",
+      "llm1_evaluation": "The student's answer is correct but missing additional context.",
+      "llm2_verification": "Correct evaluation.",
+      "marks_awarded": 8,
+      "total_marks": 10
+    },
+    {
+      "question_number": "2.a",
+      "llm1_evaluation": "The answer is partially correct but lacks important details.",
+      "llm2_verification": "Incorrect evaluation, re-evaluating.",
+      "llm3_final_evaluation": "The answer lacks specificity regarding the financial instrument's legal enforceability.",
+      "marks_awarded": 6,
+      "total_marks": 8
+    },
+    {
+      "question_number": "3.a",
+      "llm1_evaluation": "The student's answer is acceptable, but the explanation is incomplete.",
+      "llm2_verification": "Correct evaluation.",
+      "marks_awarded": 6,
+      "total_marks": 7
+    }
+  ],
+  "final_score": 29,
+  "message": "Evaluations completed and results returned."
+}
+```
+
+---
+
+### Key Points:
+- The questions and answers now reflect topics typically found in **CA Foundation** exams, including accounting principles, business laws, and basic economics.
+- The LLM evaluation process remains the same, with detailed feedback being provided and stored in the database for each question-answer pair.
