@@ -4,67 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "a15ccc3fe202e5d8",
+        "id": "a8b44df94fa4e9c4",
         "type": "tabs",
         "children": [
           {
-            "id": "8b516308c36194f5",
+            "id": "0d640599a332db3e",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "HPC/High-Performance Computing (HPC) with Python.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "High-Performance Computing (HPC) with Python"
-            }
-          },
-          {
-            "id": "d0c108131c330273",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Concepts/2. Probability and Statistics/Probability and Statistics Memory.md",
-                "mode": "preview",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Probability and Statistics Memory"
-            }
-          },
-          {
-            "id": "4666a6a2c6e6e23e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Concepts/1. Programming, DSA/2. Data Structures.md",
-                "mode": "preview",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "2. Data Structures"
-            }
-          },
-          {
-            "id": "4b9447a19000a40f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Concepts/Important/Startup/How to start a Technical Startup.md",
-                "mode": "preview",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "How to start a Technical Startup"
+              "title": "New tab"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -120,8 +73,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "5712b6738e003bc7",
@@ -206,23 +158,23 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "4666a6a2c6e6e23e",
+  "active": "ece0ed3e2a897cde",
   "lastOpenFiles": [
+    "Pasted image 20241025092853.png",
+    "Pasted image 20241024134043.png",
+    "Pasted image 20241024130011.png",
+    "Pasted image 20241024121621.png",
+    "Pasted image 20241024110456.png",
+    "HPC/High-Performance Computing (HPC) with Python.md",
+    "Concepts/2. Probability and Statistics/Probability and Statistics Memory.md",
+    "Concepts/1. Programming, DSA/2. Data Structures.md",
     "Pasted image 20241026195344.png",
     "Pasted image 20241026195329.png",
     "Concepts/2. Probability and Statistics/Notes - Probability and Statistics.md",
-    "Concepts/1. Programming, DSA/2. Data Structures.md",
-    "Concepts/2. Probability and Statistics/Probability and Statistics Memory.md",
-    "HPC/High-Performance Computing (HPC) with Python.md",
     "Pasted image 20241025094022.png",
     "Pasted image 20241025093723.png",
-    "Pasted image 20241025092853.png",
     "Pasted image 20241025091546.png",
     "Pasted image 20241024131904.png",
-    "Pasted image 20241024134043.png",
-    "Pasted image 20241024130011.png",
-    "Pasted image 20241024122412.png",
-    "Pasted image 20241024121621.png",
     "Concepts/2. Probability and Statistics/2. Probability and Statistics.md",
     "Concurrency/Python Multiprocessing.md",
     "HPC",
